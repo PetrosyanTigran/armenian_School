@@ -1,0 +1,41 @@
+.contact__grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 44px;
+}
+
+.contact__item {
+  margin-bottom: 26px;
+}
+
+.contact__label {
+  display: block;
+  font-family: var(--font-utility);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-madder);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.contact__item p {
+  margin: 0;
+  color: var(--color-ink);
+}
+
+.contact__map {
+  min-height: 340px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(43, 36, 32, 0.14);
+}
+
+@media (max-width: 800px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+  .contact__map {
+    min-height: 280px;
+  }
+}

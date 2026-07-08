@@ -1,0 +1,116 @@
+.gallery-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.gallery-page__item {
+  position: relative;
+  padding: 0;
+  border: 1px solid rgba(43, 36, 32, 0.1);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--color-cream-card);
+}
+
+.gallery-page__item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.gallery-page__item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-page__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 14px;
+  font-family: var(--font-utility);
+  font-size: 0.85rem;
+  color: #fff8ef;
+  background: linear-gradient(0deg, rgba(43, 36, 32, 0.75), rgba(43, 36, 32, 0));
+  text-align: left;
+}
+
+@media (max-width: 760px) {
+  .gallery-page__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-page__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(20, 16, 13, 0.92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.lightbox img {
+  max-width: min(900px, 90vw);
+  max-height: 74vh;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+.lightbox__caption {
+  color: #f3ecdd;
+  font-family: var(--font-utility);
+  margin-top: 16px;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #f3ecdd;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(243, 236, 221, 0.12);
+  border: none;
+  color: #f3ecdd;
+  font-size: 2.4rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.lightbox__nav--prev {
+  left: 16px;
+}
+
+.lightbox__nav--next {
+  right: 16px;
+}
+
+.lightbox__nav:hover {
+  background: rgba(243, 236, 221, 0.22);
+}

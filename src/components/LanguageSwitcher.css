@@ -1,0 +1,31 @@
+.lang-switcher {
+  display: inline-flex;
+  border: 1.5px solid var(--color-ink);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lang-switcher__btn {
+  background: transparent;
+  border: none;
+  padding: 6px 13px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--color-ink);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.lang-switcher__btn + .lang-switcher__btn {
+  border-left: 1.5px solid var(--color-ink);
+}
+
+.lang-switcher__btn.is-active {
+  background: var(--color-ink);
+  color: var(--color-parchment);
+}
+
+.lang-switcher__btn:hover:not(.is-active) {
+  background: rgba(43, 36, 32, 0.08);
+}
