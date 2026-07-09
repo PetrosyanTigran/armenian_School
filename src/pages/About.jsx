@@ -25,7 +25,7 @@ export default function About() {
             <p className="section-lead">{t('about.historyText')}</p>
           </div>
           <div className="about__history-figure" aria-hidden="true">
-          <img src={assetet('logo.png')} alt="" width="40" height="40" />
+          <img src={asset('logo.png')} alt="" width="40" height="40" />
           </div>
         </div>
       </section>
