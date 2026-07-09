@@ -4,14 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://PetrosyanTigran.github.io/armenian_School/",
-  "scripts": {
-    "predeploy": "npm run build && cp dist/index.html dist/404.html",
-    "deploy": "gh-pages -d dist",
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "oxlint",
-    "preview": "vite preview"
-  },
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "lint": "oxlint",
+  "preview": "vite preview",
+  "deploy": "vite build && cp docs/index.html docs/404.html && git add docs && git commit -m \"Deploy site\" && git push"
+},
   "dependencies": {
     "i18next": "^26.3.5",
     "i18next-browser-languagedetector": "^8.2.1",
