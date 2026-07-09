@@ -1,14 +1,16 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import OrnamentDivider from '../components/OrnamentDivider.jsx';
+import { asset } from '../utils/asset.js';
+
 import './Home.css';
 
 const ARMENIAN_ALPHABET_ROW = 'Ա Բ Գ Դ Ե Զ Է Ը Թ Ժ Ի Լ Խ Ծ Կ Հ Ձ Ղ Ճ Մ';
 
 const galleryPreview = [
-  { file: '/images/gallery/event-1.jpg', key: 'event1' },
-  { file: '/images/gallery/event-2.jpg', key: 'event2' },
-  { file: '/images/gallery/event-3.jpg', key: 'event3' },
+  { file: asset('images/gallery/event-1.jpg'), key: 'event1' },
+  { file: asset('images/gallery/event-2.jpg'), key: 'event2' },
+  { file: asset('images/gallery/event-3.jpg'), key: 'event3' },
 ];
 
 export default function Home() {
@@ -33,7 +35,7 @@ export default function Home() {
 
           <div className="hero__emblem" aria-hidden="true">
             <div className="hero__emblem-glow" />
-            <img src="/logo.png" alt="" className="hero__emblem-img" />
+            <img src={asset('logo.png')} alt="" className="hero__emblem-img" />
           </div>
         </div>
 

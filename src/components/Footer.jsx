@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import OrnamentDivider from './OrnamentDivider.jsx';
+import { asset } from '../utils/asset.js';
 import './Footer.css';
 
 export default function Footer() {
@@ -13,7 +14,7 @@ export default function Footer() {
       <div className="container site-footer__grid">
         <div className="site-footer__col">
           <div className="site-footer__brand">
-            <img src="/logo.png" alt="" width="40" height="40" />
+            <img src={asset('logo.png')} alt="" width="40" height="40" />
             <span>{t('school.name')}<br /><small>{t('school.type')} · {t('school.city')}</small></span>
           </div>
           <p className="site-footer__tagline">{t('footer.tagline')}</p>

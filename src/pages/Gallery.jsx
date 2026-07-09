@@ -1,15 +1,17 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import PageHero from '../components/PageHero.jsx';
+import { asset } from '../utils/asset.js';
+
 import './Gallery.css';
 
 const photos = [
-  { file: '/images/gallery/event-1.jpg', key: 'event1' },
-  { file: '/images/gallery/event-2.jpg', key: 'event2' },
-  { file: '/images/gallery/event-3.jpg', key: 'event3' },
-  { file: '/images/gallery/event-4.jpg', key: 'event4' },
-  { file: '/images/gallery/event-5.jpg', key: 'event5' },
-  { file: '/images/gallery/event-6.jpg', key: 'event6' },
+  { file: asset('images/gallery/event-1.jpg'), key: 'event1' },
+  { file: asset('images/gallery/event-2.jpg'), key: 'event2' },
+  { file: asset('images/gallery/event-3.jpg'), key: 'event3' },
+  { file: asset('images/gallery/event-4.jpg'), key: 'event4' },
+  { file: asset('images/gallery/event-5.jpg'), key: 'event5' },
+  { file: asset('images/gallery/event-6.jpg'), key: 'event6' },
 ];
 
 export default function Gallery() {

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import PageHero from '../components/PageHero.jsx';
+import { asset } from '../utils/asset.js';
 import './About.css';
 
 export default function About() {
@@ -24,7 +25,7 @@ export default function About() {
             <p className="section-lead">{t('about.historyText')}</p>
           </div>
           <div className="about__history-figure" aria-hidden="true">
-            <img src="/logo.png" alt="" />
+          <img src={assetet('logo.png')} alt="" width="40" height="40" />
           </div>
         </div>
       </section>

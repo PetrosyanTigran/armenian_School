@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher.jsx';
+import { asset } from '../utils/asset.js';
 import './Header.css';
 
 export default function Header() {
@@ -19,7 +20,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container site-header__bar">
         <NavLink to="/" className="site-header__brand" onClick={() => setOpen(false)}>
-          <img src="/logo.png" alt="" className="site-header__logo" width="48" height="48" />
+          <img src={asset('logo.png')} alt="" className="site-header__logo" width="48" height="48" />
           <span className="site-header__brand-text">
             <span className="site-header__brand-name">{t('school.name')}</span>
             <span className="site-header__brand-type">{t('school.type')} · {t('school.city')}</span>
